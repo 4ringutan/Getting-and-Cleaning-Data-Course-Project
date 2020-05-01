@@ -40,7 +40,7 @@ library(reshape2)
 
 meltDS4 <- melt(DS4,(id=c("subject","activity"))) 
 newDS <- dcast(meltDS4, subject + activity ~ variable, mean) #makes a new dataset with only the mean
-write.table(newDS, "tidy_data.txt", row.names=FALSE)
+write.table(newDS, "tidy_data.txt", sep = ",")
 
 
 
